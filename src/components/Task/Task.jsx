@@ -1,5 +1,5 @@
-/* import { MdClose } from "react-icons/md";
-import css from "./Task.module.css";
+import { MdClose } from "react-icons/md";
+import css from "./Task.module.css"; /*
 
 export const Task = ({ task }) => {
   return (
@@ -65,10 +65,18 @@ export const Task = ({ task }) => {
   const handleToggle = () => dispatch(toggleCompleted(task.id));
 
   return (
-    <div>
-      <input type="checkbox" onChange={handleToggle} checked={task.completed} />
-      <p>{task.text}</p>
-      <button onClick={handleDelete}>Delete</button>
+    <div className={css.wrapper}>
+      <input
+        type="checkbox"
+        className={css.checkbox}
+        onChange={handleToggle}
+        checked={task.completed}
+      />
+      <p className={css.text}>{task.text}</p>
+      <button className={css.btn} onClick={handleDelete}>
+        <MdClose size={24} />
+        {/* Delete */}
+      </button>
     </div>
   );
 };

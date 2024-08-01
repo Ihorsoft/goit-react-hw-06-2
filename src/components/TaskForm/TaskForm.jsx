@@ -1,6 +1,6 @@
-/* import { Button } from "../Button/Button";
+import { Button } from "../Button/Button";
 import css from "./TaskForm.module.css";
-
+/*
 export const TaskForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -46,8 +46,13 @@ export const TaskForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="text" placeholder="Enter task text..." />
+    <form className={css.form} onSubmit={handleSubmit}>
+      <input
+        className={css.field}
+        type="text"
+        name="text"
+        placeholder="Enter task text..."
+      />
       <button type="submit">Add task</button>
     </form>
   );

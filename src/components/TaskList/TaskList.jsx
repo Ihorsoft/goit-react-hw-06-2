@@ -17,7 +17,7 @@ const getVisibleTasks = (tasks, statusFilter) => {
 
 export const TaskList = () => {
   // Отримуємо масив завдань із стану Redux
-  const tasks = useSelector((state) => state.tasks);
+  const tasks = useSelector((state) => state.tasks.item1);
 
   // Отримуємо значення фільтра із стану Redux
   const statusFilter = useSelector((state) => state.filters.status);

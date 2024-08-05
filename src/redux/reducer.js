@@ -36,11 +36,9 @@ export const rootReducer = (state = initialState, action) => {
     case "tasks/deleteTask": {
       // Потрібно повернути новий об'єкт стану
       return {
-        // в якому є всі дані існуючого стану
         ...state,
-        // та новий масив задач
         tasks: [
-          // в якому є всі існуючі завдання on filter
+          // в якому є всі існуючі завдання on filter можна без квадратних дуж і без ... повторно
           ...state.tasks.filter((task) => task.id !== action.payload),
           // та об'єкт нового завдання
           // action.payload,
@@ -51,13 +49,13 @@ export const rootReducer = (state = initialState, action) => {
       // Потрібно повернути новий об'єкт стану
       return {
         ...state,
-        // в якому є всі дані існуючого стану
+
         tasks: [
           ...state.tasks.map((task) => {
             if (task.id !== action.payload) {
               return task;
             }
-            console.log("task for toggle: ", task);
+
             return {
               ...task,
               completed: !task.completed,
@@ -72,7 +70,7 @@ export const rootReducer = (state = initialState, action) => {
         // в якому є всі дані існуючого стану
         ...state,
         // та новий обєкт фільтр
-        filters: { status: action.payload },
+        filters: { ...state.filters, status: action.payload },
       };
     }
 

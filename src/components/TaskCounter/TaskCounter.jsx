@@ -16,8 +16,10 @@ import { useSelector } from "react-redux";
 
 export const TaskCounter = () => {
   // Отримуємо масив завдань із стану Redux
-  const tasks = useSelector((state) => state.tasks);
+  const tasks = useSelector((state) => state.tasks.item1);
+  console.log("tsaks in TasksCounter: ", tasks);
 
+  console.log("tsaks in TasksCounter2 : ", tasks);
   // На базі стану Redux отримуємо похідні дані
   const count = tasks.reduce(
     (acc, task) => {

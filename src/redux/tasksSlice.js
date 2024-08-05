@@ -3,16 +3,8 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
 const t1 = "hallou";
 const tasksSlice = createSlice({
   name: "tasks",
-  initialState: {[]
-    /*  item1: [
-      {
-        text: "Hellou",
-        id: "0",
-        completed: false,
-      },
-    ], */
-  },
-  /*  initialState: {
+  // initialState: {[]},
+  initialState: {
     item1: [
       {
         text: "Hellou",
@@ -20,7 +12,7 @@ const tasksSlice = createSlice({
         completed: false,
       },
     ],
-  }, */
+  },
   reducers: {
     addTask: {
       reducer(state, action) {

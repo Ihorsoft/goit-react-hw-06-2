@@ -3,7 +3,7 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
 const t1 = "hallou";
 const tasksSlice = createSlice({
   name: "tasks",
-  initialState: {
+  initialState: {[]
     /*  item1: [
       {
         text: "Hellou",

@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { tasksReducer } from "./tasksSlice";
+import { contactsReducer } from "./contactsSlice";
 import { filtersReducer } from "./filtersSlice";
 import {
   persistStore,
@@ -19,12 +19,11 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, tasksReducer);
+const persistedReducer = persistReducer(persistConfig, contactsReducer);
 
 export const store = configureStore({
   reducer: {
-    tasks: persistedReducer,
-    // tasks: tasksReducer,
+    contacts: persistedReducer,
     filters: filtersReducer,
   },
   middleware: (getDefaultMiddleware) =>

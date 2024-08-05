@@ -1,14 +1,15 @@
 import { Layout } from "./Layout/Layout";
-import { AppBar } from "./AppBar/AppBar";
-import { TaskForm } from "./TaskForm/TaskForm";
-import { TaskList } from "./TaskList/TaskList";
 
+import { ContactsForm } from "./ContactsForm/ContactsForm";
+import { ContactList } from "./ContactList/ContactList";
+import { SearchBox } from "./SearchBox/SearchBox";
 export const App = () => {
   return (
     <Layout>
-      <AppBar />
-      <TaskForm />
-      <TaskList />
+      <h1>Phone books</h1>
+      <ContactsForm />
+      <SearchBox />
+      <ContactList />
     </Layout>
   );
 };
